@@ -103,7 +103,7 @@ const works = [
                 url: ""
             }
         ],
-        imageLink: "images/tracksubs_pic.png",
+        imageLink: "",
         alignLeft: false
     },
     {
@@ -118,7 +118,7 @@ const works = [
                 url: "https://www.linkedin.com/posts/belmiro-adriano-18554024a_gamedevelopment-softwareengineering-42school-activity-7234176184912146432-YOTH?utm_source=share&utm_medium=member_desktop"
             }
         ],
-        imageLink: "images/portfolio_pic.png",
+        imageLink: "",
         alignLeft: true
     },
     
