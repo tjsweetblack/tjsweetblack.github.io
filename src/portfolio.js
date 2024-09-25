@@ -100,10 +100,10 @@ const works = [
             {
                 label: "",
                 type: "external",
-                url: ""
+                url: "https://github.com/tjsweetblack/ft_get_nex_line"
             }
         ],
-        imageLink: "",
+        imageLink: "images/tracksubs_pic.png",
         alignLeft: false
     },
     {
@@ -118,7 +118,7 @@ const works = [
                 url: "https://www.linkedin.com/posts/belmiro-adriano-18554024a_gamedevelopment-softwareengineering-42school-activity-7234176184912146432-YOTH?utm_source=share&utm_medium=member_desktop"
             }
         ],
-        imageLink: "",
+        imageLink: "images/portfolio_pic.png",
         alignLeft: true
     },
     
