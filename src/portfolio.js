@@ -33,26 +33,23 @@ const greeting = {
 }
 
 const socialMediaLinks = {
-    github: "https://github.com/feifyKike",
-    linkedin: "https://www.linkedin.com/in/maxim-shelepov1",
-    medium: "https://medium.com/@mimaishel",
-    stackoverflow: "",
-    xtwitter: "https://twitter.com/mimaishel"
+    github: "https://github.com/tjsweetblack",
+    linkedin: "https://www.linkedin.com/in/belmiro-adriano-18554024a/",
+
 } // to add any additional social media links check out the README.md or src/icons.js file
 
 // --- 😎 About Section ---
 const about = {
     autobiography: [
-        "My name is Maxim Shelepov and I'm a computer science student at North Carolina State University. I have a passion for coding in languages such as Python, Java, PHP, & Swift. Work in web development and have experience with Django and Laravel frameworks.",
-        "Responsible, organized, problem solver, and independent thinker. Work well in a team and a quick learner. Programming for 3+ years and have 4 years of experience in advanced mathematics such as calculus, statistics, and discrete mathematics. Currently working as a web development intern for my university."
+        "My name is Belmiro Adriano, and I’m a computer science student at 42 Luanda, where I study software engineering. My primary programming languages are C and C++, but I’m also expanding my skills by learning Dart, Flutter, and Python on my own.I’m responsible, organized, and a problem solver. I work well in a team, learn quickly, and think independently. I’ve been programming for over 3 years and have a strong foundation in advanced mathematics like calculus, statistics, and discrete mathematics. Currently, I’m focused on developing projects that merge my skills in software engineering and mobile app development."
     ], // Separated items are paragraphs
     techStack: [
-        "PHP",
+        "C",
+        "C++",
         "Python",
-        "JavaScript",
         "Vue.js",
-        "MySQL",
-        "Swift"
+        "Dart",
+        "Flutter"
     ],
     photo1Link: "images/portrait1.jpeg",
     photo2Link: "images/portrait2.jpeg",
@@ -62,44 +59,24 @@ const about = {
 // --- 🛡️ Experience Section ---
 const experiences = [
     {
-        position: "Web Dev Intern",
+        position: "Graphic Designer",
         company: {
-            name: "WolfTech",
-            link: "https://tools.wolftech.ncsu.edu/support/index.php/WolfTech_Information_Technology"
+            name: "YetuBrand",
+            link: "https://yetubrand.ao"
         },
-        duration: "Aug 2022 - Present",
+        duration: "2021 - 2023",
         bulletPoints: [
-            "Resolved issues and developed new tools within several university web applications (email automation, research discovery, educational resources, scheduling tools, and text-generative AI news sharing).",
-            "Achieved 100+ github code contributions as an intern on the team.",
-            "Currently rebuilding and modernizing the university digital sign manager and system."
+            "Designed visually appealing graphics and layouts for various marketing materials.",
+            "Collaborated with clients to understand their branding needs and deliver tailored solutions.",
+            "Managed multiple projects simultaneously while meeting tight deadlines.",
+            "Utilized Adobe Creative Suite tools to create high-quality designs."
         ],
         hashtags: [
-            "Laravel",
-            "PHP",
-            "MySQL",
-            "JS",
-            "Vue.js",
-            "HTML",
-            "Tailwind"
-        ]
-    },
-    {
-        position: "Math Tutor",
-        company: {
-            name: "Mathnasium",
-            link: "https://www.mathnasium.com"
-        },
-        duration: "Jan 2022 - Aug 2022",
-        bulletPoints: [
-            "Taught math to students elementary through high school covering topics from basic algebra to college-level calculus.",
-            "Directed the trajectory of the student's learning plan and math topic evaluation to facilitate success in their school math class.",
-            "Requested by many students and parents for routine weekly tutoring sessions in a system with a standard random weekly rotation."
-        ],
-        hashtags: [
-            "Calc 1-2",
-            "Algebra 1-3",
-            "Discrete Math",
-            "Statistics"
+            "AdobeDesignTools",
+            "GraphicDesign",
+            "Marketing",
+            "Branding",
+            "Creativity"
         ]
     }
 ]
@@ -107,100 +84,41 @@ const experiences = [
 // --- 💻 Work Section ---
 const works = [
     {
-        projectName: "TrackYourSubs IOS App",
-        yearCompleted: "2022",
-        description: "An IOS app to track you subscriptions and expenses, all the while presenting in a clean and professional look with a load of features. Some of the more evident features are: Budgeting (monthly / yearly option available), Current monthly & yearly total expense at a glance, Custom suggestions to meet budget, Organize (Categorization & Importance) and filter through subscriptions, Reminders via scheduled notifications, Stats page: pie chart visual, bar chart visual, and streak indicator.",
-        techStack: "Swift, SwiftUI",
+        projectName: "Get Next Line",
+        yearCompleted: "2024",
+        description: "Because reading a line from a fd is way too tedious, this project is about creating your own function that returns a line read from one file descriptor or more, if you consider the bonus project requirement. The function get_next_line() returns NULL, if there is nothing else to read or if an error occurred.",
+        techStack: "C",
         links: [
             {
                 label: "",
                 type: "git",
-                url: "https://github.com/feifyKike/TrackYourSubsDemo/"
+                url: "https://github.com/tjsweetblack/ft_get_nex_line"
             },
             {
                 label: "",
                 type: "external",
-                url: "https://youtu.be/KsTx-F70OOk"
+                url: ""
             }
         ],
         imageLink: "images/tracksubs_pic.png",
         alignLeft: false
     },
     {
-        projectName: "Dynamic Portfolio Website",
-        yearCompleted: "2021",
-        description: "Developed a personal portfolio website with Python backend using the Django web development framework. Incorporated HTML, CSS, and JavaScript to construct the frontend of the website.",
-        techStack: "Django, Python, HTML, CSS, JS",
+        projectName: "so_long",
+        yearCompleted: "2024",
+        description: "So_Long is a simple tile-based game where the player must collect all the collectibles and reach the exit while navigating through obstacles. Developed using the MiniLibX library for graphics and handling user inputs, this game is a classic example of a 2D puzzle platformer. Features",
+        techStack: "C, Makefile, MiniLibX",
         links: [
             {
                 label: "",
                 type: "external",
-                url: "https://maximshelepov.com"
+                url: "https://www.linkedin.com/posts/belmiro-adriano-18554024a_gamedevelopment-softwareengineering-42school-activity-7234176184912146432-YOTH?utm_source=share&utm_medium=member_desktop"
             }
         ],
         imageLink: "images/portfolio_pic.png",
         alignLeft: true
     },
-    {
-        projectName: "Sudoku Game & Solver",
-        yearCompleted: "2021",
-        description: "Built a Sudoku game UI incorporating the Java Swing library. Randomly generates a Sudoku puzzle and solves itself using the backtracking algorithm written in Java..",
-        techStack: "Java",
-        links: [
-            {
-                label: "",
-                type: "git",
-                url: "https://github.com/feifyKike/sudokusolver"
-            },
-            {
-                label: "",
-                type: "external",
-                url: "https://youtu.be/lXOjOrjf5hU"
-            }
-        ],
-        imageLink: "images/sudoku_pic.png",
-        alignLeft: false
-    },
-    {
-        projectName: "Trivia Quiz",
-        yearCompleted: "2020",
-        description: "Interested in taking a fun and interactive pop quiz? Using the HTML, CSS3, JavaScript, and jQuery I created a quiz that can be taken on numerous topics of your choice and gives instant feedback. The entire project is built mostly on JavaScript and all the functionality and events are controlled through functions such as ReadDisplay and Validate. The HTML portion of the online quiz only serves as the skeleton and template for elements that will be created via JS.",
-        techStack: "JS, HTML, CSS",
-        links: [
-            {
-                label: "",
-                type: "git",
-                url: "https://github.com/feifyKike/JS-API-Quiz"
-            },
-            {
-                label: "",
-                type: "external",
-                url: "https://codepen.io/Max_the_coder/pen/yLXZOYL" //https://codepen.io/Max_the_coder/pen/yLXZOYL
-            }
-        ],
-        imageLink: "images/trivia_pic.png",
-        alignLeft: true
-    },
-    {
-        projectName: "Coronavirus Report",
-        yearCompleted: "2020",
-        description: "Created a program that displays up-to-date COVID-19 data and shows results in a graphical / visual representation. Coded with the Python programming language and libraries such as Matplotlib, Requests, and CSV.",
-        techStack: "Python",
-        links: [
-            {
-                label: "",
-                type: "git",
-                url: "https://youtu.be/gw5kb1QKVp0"
-            },
-            {
-                label: "",
-                type: "external",
-                url: "https://github.com/feifyKike/Covid-Cases-Visual"
-            }
-        ],
-        imageLink: "images/covid_pic.png",
-        alignLeft: false
-    }
+    
 ]
 
 const archiveLink = "https://github.com/feifyKike?tab=repositories"
@@ -211,7 +129,7 @@ const contact = {
     externalLink: {
         shortTitle: "Get in Touch",
         note: [
-            "Currently seeking web and software development positions/internships in the RTP area for summer 2024.",
+            "Currently seeking web and software development internships.",
             "Also looking to build a team for projects & startup ideas or just make professional connections."
         ], // paragraph breaks will be entered after each item,
         link: {
