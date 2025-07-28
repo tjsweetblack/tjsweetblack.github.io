@@ -214,6 +214,7 @@ export default {
     socialMediaLinks,
     about,
     experiences,
+    projectUnit,
     works,
     archiveLink,
     contact
