@@ -6,14 +6,21 @@
             <a :href="portfolio.archiveLink" class="pl-2 sm:pl-5 hover:text-link-color text-right text-sm">Visit Archive</a>
         </div>
         <div :class="['flex flex-col space-y-12 mb-36 transition-all motion-reduce:transition-none duration-500 delay-300', visible ? 'translate-y-0 opacity-1 blur-0' : 'translate-y-4 opacity-0 blur-sm']">
+            <!-- WorkUnit components from works array -->
+            <WorkUnit
+                v-for="(project, index) in portfolio.works"
+                :key="`work-${index}`" :project="project"
+            />
+            
+            <!-- ProjectView components from projectUnit array -->
             <ProjectView
                 v-for="(project, index) in projInitial"
-                :key="index" :project="project"
+                :key="`project-${index}`" :project="project"
             />
             <ProjectView
                 v-if="showMore"
                 v-for="(project, index) in content"
-                :key="index" :project="project"
+                :key="`project-more-${index}`" :project="project"
             />
 
             <button v-show="showPreview" @click="toggleShowMore" class="w-52 py-2 px-6 mx-auto mt-10 bg-transparent border border-button-color text-button-color shadow-sm shadow-button-color transition ease-in-out hover:bg-button-color hover:text-white focus:bg-button-color focus:text-white active:bg-button-color active:text-white duration-300">
@@ -24,7 +31,7 @@
 </template>
 <script setup>
 import { ref } from 'vue'
-import ProjectView from '../views/ProjectView.vue'
+import WorkUnit from '../components/WorkUnit.vue'
 import ProjectView from './ProjectView.vue'
 import { useRouter } from 'vue-router';
 import portfolio from '../portfolio';
