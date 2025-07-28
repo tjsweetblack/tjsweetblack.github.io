@@ -124,6 +124,68 @@ const works = [
     
 ]
 
+const projectUnit = [
+    {
+      projectName: "Burger App Flutter",
+      yearCompleted: "2025",
+      description: "A comprehensive mobile application built with Flutter for ordering and managing burger deliveries. Features include user authentication, menu Browse, order placement, and real-time order tracking.",
+      techStack: "Dart, Flutter, Firebase, OpenStreetMap",
+      links: [
+        { label: "GitHub Repo", type: "git", url: "https://github.com/tjsweetblack/ft_get_nex_line" },
+        { label: "Live Demo", type: "external", url: "https://github.com/tjsweetblack/ft_get_nex_line" }
+      ],
+      imageLinks: [
+        "images/b1.png",
+        "images/b2.png",
+        "images/b3.png",
+        "images/b4.png",
+        "images/b5.png",
+        "images/b6.png",
+        "images/b7.png",
+        "images/b8.png",
+        "images/b9.png",
+        "images/b10.png",
+        "images/b11.png",
+        "images/b12.png",
+        ],
+      alignLeft: false // Follows `so_long` (true), so this is correct.
+    },
+    {
+      projectName: "MapaZZZ",
+      yearCompleted: "2025",
+      description: "An interactive mapping application developed using Flutter, integrating Firebase for data storage and OpenStreetMap for detailed geographical information. Allows users to discover and save locations of interest.",
+      techStack: "Dart, Flutter, Firebase, OpenStreetMap",
+      links: [
+        { label: "GitHub Repo", type: "git", url: "" },
+        { label: "Live Demo", type: "external", url: "" }
+      ],
+      imageLinks: [
+        "images/m1.png",
+        "images/m2.png",
+        "images/m3.png",
+        "images/m4.png",
+        "images/m5.png",
+        "images/m6.png",
+        "images/m7.png",
+        "images/m8.png",
+        "images/m9.png",
+        "images/m10.png",
+        "images/m11.png",
+        "images/m12.png",
+        "images/m13.png",
+        "images/m14.png",
+        "images/m15.png",
+        "images/m16.png",
+        "images/m17.png",
+        "images/m18.png",
+        "images/m19.png",
+        "images/m20.png",
+        "images/m21.png",
+      ],
+      alignLeft: true // This should be true to alternate with the previous project.
+    }
+  ];
+
 const archiveLink = "https://github.com/feifyKike?tab=repositories"
 
 // --- 📭 Contact Section ---
