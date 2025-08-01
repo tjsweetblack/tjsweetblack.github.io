@@ -24,7 +24,7 @@ const greeting = {
     name: "Belmiro Adriano",
     message: "I'm a computer science student and an aspiring software engineer. Currently working as a web developer at my university building tools to aid students, educators, and staff.",
     basedLocation: "Angola, LUANDA",
-    resumeLink: "https://jmp.sh/nXo5fHJ4", // recommended: google drive file share link (change to "anyone on the internet can view")
+    resumeLink: "https://jmp.sh/opL8Ujes", // recommended: google drive file share link (change to "anyone on the internet can view")
     logo: {
         link: "images/initials.png", // use relative path from  parent directory -> ex: images/image.ext
         custom: true // takes precedence over image logo and allows for custom HTML logo (./components/Navbar.vue)
@@ -153,7 +153,7 @@ const projectUnit = [
     {
       projectName: "MapaZZZ",
       yearCompleted: "2025",
-      description: "An interactive mapping application developed using Flutter, integrating Firebase for data storage and OpenStreetMap for detailed geographical information. Allows users to discover and save locations of interest.",
+      description: "An interactive mapping application developed using Flutter, integrating Firebase for data storage and OpenStreetMap for detailed geographical information. Allows users to discover or add mosquito breeding sites, view nearby sites, and receive notifications for nearby breeding sites. to avoid malaria.",
       techStack: "Dart, Flutter, Firebase, OpenStreetMap",
       links: [
         { label: "GitHub Repo", type: "git", url: "" },
