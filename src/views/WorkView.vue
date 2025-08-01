@@ -29,14 +29,11 @@
 import { ref } from 'vue'
 import WorkUnit from '../components/WorkUnit.vue'
 import ProjectView from './ProjectView.vue'
-import { useRouter } from 'vue-router';
 import portfolio from '../portfolio';
 import { onIntersect } from '../composables/onIntersect';
 
-const router = useRouter()
-
 const props = defineProps({
-    content: Object,
+    content: Array,
     transitions: Object
 })
 
@@ -55,4 +52,6 @@ let toggleShowMore = () => {
     }
 }
 
+console.log('Works data:', props.content)
+console.log('ProjectUnit data:', portfolio.projectUnit)
 </script>

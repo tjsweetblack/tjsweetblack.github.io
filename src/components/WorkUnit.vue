@@ -2,10 +2,11 @@
     <div :class="['flex flex-col lg:grid lg:grid-cols-2 lg:gap-x-4 transition-opacity motion-reduce:transition-none duration-500', showProject ? 'opacity-1' : 'opacity-0']">
         <div v-if="!project.alignLeft" class="order-first pb-4 lg:pb-0 lg:order-none lg:block">
             <img
-                @load="showProject = !showProject"
+                @load="showProject = true"
                 :src="getImageUrl(project.imageLink)"
                 class="shadow-md"
                 loading="lazy"
+                @error="handleImageError"
             />
         </div>
         <div class="flex flex-col space-y-4" :class="project.alignLeft ? 'text-left' : 'lg:text-right'">
@@ -32,10 +33,11 @@
         </div>
         <div v-if="project.alignLeft" class="order-first pb-4 lg:pb-0 lg:order-none lg:block">
             <img
-                @load="showProject = !showProject"
+                @load="showProject = true"
                 :src="getImageUrl(project.imageLink)"
                 class="shadow-md"
                 loading="lazy"
+                @error="handleImageError"
             />
         </div>
     </div>
@@ -48,11 +50,18 @@ const props = defineProps({
     project: Object
 })
 
-// Static Images
-const showProject = ref(false)
+const showProject = ref(true) // Show immediately
 
-let getImageUrl = (path) => {
-  return new URL(`../assets/${path}`, import.meta.url).href
+const handleImageError = (event) => {
+    console.warn('Failed to load work image:', event.target.src);
+    // Show placeholder on error
+    event.target.src = 'https://via.placeholder.com/400x300/4305ba/ffffff?text=Project';
 }
 
+let getImageUrl = (path) => {
+  if (!path) return 'https://via.placeholder.com/400x300/4305ba/ffffff?text=Project';
+  return `/${path}`;
+}
+
+console.log('WorkUnit project:', props.project)
 </script>

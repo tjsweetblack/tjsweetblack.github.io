@@ -78,9 +78,8 @@ const handleImageError = (event) => {
 
 const getImageUrl = (path) => {
   if (!path || path === 'undefined' || path === null || typeof path !== 'string') {
-    return ''; 
+    return 'https://via.placeholder.com/400x300/4305ba/ffffff?text=Image'; 
   }
-  // Simple path resolution for public folder
   return `/${path}`;
 };
 
