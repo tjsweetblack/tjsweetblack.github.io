@@ -50,7 +50,7 @@ const about = {
         "Vue.js",
         "Dart",
         "Flutter",
-        "Github",
+        "Git",
         "Bash",
         "CMake",
     ],
@@ -114,11 +114,31 @@ const works = [
         links: [
             {
                 label: "",
+                type: "git",
+                url: "https://github.com/tjsweetblack/ft_get_nex_line"
+            },
+            {
+                label: "",
                 type: "external",
                 url: "https://www.linkedin.com/posts/belmiro-adriano-18554024a_gamedevelopment-softwareengineering-42school-activity-7234176184912146432-YOTH?utm_source=share&utm_medium=member_desktop"
             }
         ],
         imageLink: "images/portfolio_pic.png",
+        alignLeft: true
+    },
+    {
+        projectName: "Cube 3D",
+        yearCompleted: "2024",
+        description: "A 3D graphical representation of a maze from a first-person perspective, inspired by the classic game Wolfenstein 3D. This project was developed as part of the 42 school curriculum. It utilizes the raycasting rendering technique to create the illusion of a three-dimensional space from a two-dimensional map.",
+        techStack: "C, Makefile, MiniLibX",
+        links: [
+            {
+                label: "gtihub repo",
+                type: "git",
+                url: "https://github.com/tjsweetblack/Cube3d"
+            }
+        ],
+        imageLink: "images/cub3d.png",
         alignLeft: true
     },
     
@@ -131,8 +151,7 @@ const projectUnit = [
       description: "A comprehensive mobile application built with Flutter for ordering and managing burger deliveries. Features include user authentication, menu Browse, order placement, and real-time order tracking.",
       techStack: "Dart, Flutter, Firebase, OpenStreetMap",
       links: [
-        { label: "GitHub Repo", type: "git", url: "https://github.com/tjsweetblack/ft_get_nex_line" },
-        { label: "Live Demo", type: "external", url: "https://github.com/tjsweetblack/ft_get_nex_line" }
+        { label: "View Live Demo", type: "external", url: "https://my-347sl8xjz-miros-projects-c74f19f1.vercel.app/" }
       ],
       imageLinks: [
         "images/b1.png",
@@ -156,8 +175,7 @@ const projectUnit = [
       description: "An interactive mapping application developed using Flutter, integrating Firebase for data storage and OpenStreetMap for detailed geographical information. Allows users to discover or add mosquito breeding sites, view nearby sites, and receive notifications for nearby breeding sites. to avoid malaria.",
       techStack: "Dart, Flutter, Firebase, OpenStreetMap",
       links: [
-        { label: "GitHub Repo", type: "git", url: "" },
-        { label: "Live Demo", type: "external", url: "" }
+        { label: "View Live Demo", type: "external", url: "https://mapa-zzz-team-83bq43p0i-miros-projects-c74f19f1.vercel.app/" }
       ],
       imageLinks: [
         "images/m1.png",
@@ -194,6 +212,7 @@ const contact = {
     externalLink: {
         shortTitle: "Get in Touch",
         note: [
+            "Email: belmiroa34@gmail.com",
             "Currently seeking web and software development internships.",
             "Also looking to build a team for projects & startup ideas or just make professional connections."
         ], // paragraph breaks will be entered after each item,
