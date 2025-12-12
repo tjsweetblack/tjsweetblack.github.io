@@ -146,11 +146,12 @@ const works = [
 
 const projectUnit = [
     {
-      projectName: "Burger App Flutter",
+      projectName: "MoBurger",
       yearCompleted: "2025",
-      description: "A comprehensive mobile application built with Flutter for ordering and managing burger deliveries. Features include user authentication, menu Browse, order placement, and real-time order tracking.",
+      description: "A comprehensive mobile application built with Flutter for ordering and managing burger deliveries. Features include user authentication, menu browsing, custom burger creation, order placement, and real-time order tracking with Firebase backend integration.",
       techStack: "Dart, Flutter, Firebase, OpenStreetMap",
       links: [
+        { label: "Download on App Store", type: "appstore", url: "https://apps.apple.com/ao/app/moburger/id6755946307" },
         { label: "View Live Demo", type: "external", url: "https://my-347sl8xjz-miros-projects-c74f19f1.vercel.app/" }
       ],
       imageLinks: [
