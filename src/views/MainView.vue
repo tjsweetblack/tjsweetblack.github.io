@@ -1,7 +1,8 @@
 <template>
 	<SplashView v-if="showingSplash"/>
+	<LanguageView v-else-if="showLanguageSelect"/>
 
-  	<div v-show="!showingSplash" class="min-h-screen overscroll-contain bg-white dark:bg-slate-900 dark:text-slate-300 text-base md:text-xl">
+  	<div v-show="!showingSplash && !showLanguageSelect" class="min-h-screen overscroll-contain bg-white dark:bg-slate-900 dark:text-slate-300 text-base md:text-xl">
 		<Navbar :show-transition="showLanding" :dark-mode-active="darkModeActive" @toggle-dark="toggleDark"/>
 
 		<div class="min-h-full mx-10">
@@ -37,7 +38,7 @@
 				</div>
 				<div class="col-span-4 flex-1 flex-col order-1 md:order-none">
 					<div class="container mx-auto max-w-full 2xl:max-w-6xl">
-						<LandingView :content="portfolio.greeting" :show-transition="showLanding"/>
+						<LandingView :content="greetingContent" :show-transition="showLanding"/>
 
 						<AboutView :content="portfolio.about" :transitions="portfolio.transitions" />
 
@@ -56,7 +57,7 @@
 					</div>
 				</div>
 				<div class="hidden col-span-1 md:flex flex-initial relative order-2 text-center md:order-none">
-					<p :class="['fixed bottom-2 right-10 origin-top-right rotate-90 transition-all motion-reduce:transition-none duration-500', showLanding ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">📍 Based in {{ portfolio.greeting.basedLocation }}</p>
+					<p :class="['fixed bottom-2 right-10 origin-top-right rotate-90 transition-all motion-reduce:transition-none duration-500', showLanding ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">📍 {{ basedLocationText }}</p>
 				</div>
 			</div>
 		</div>
@@ -64,7 +65,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 
 import Navbar from '../components/Navbar.vue'
@@ -75,12 +76,15 @@ import AchievementsView from './AchievementsView.vue'
 import WorkView from './WorkView.vue'
 import ContactView from './ContactView.vue'
 import SplashView from './SplashView.vue'
+import LanguageView from './LanguageView.vue'
 
 import portfolio from '../portfolio'
+import { getLanguage, translations, currentLanguage } from '../i18n/translations'
 
 const router = useRouter()
 
 const showingSplash = ref(portfolio.splashScreen)
+const showLanguageSelect = ref(!localStorage.getItem('language'))
 const showLanding = ref(!(portfolio.transitions.active || portfolio.transitions.onlyLanding))
 const darkModeActive = ref(false)
 
@@ -97,12 +101,33 @@ const mediumLink = portfolio.socialMediaLinks.medium
 const stackoverflowLink = portfolio.socialMediaLinks.stackoverflow
 const xTwitterLink = portfolio.socialMediaLinks.xtwitter;
 
+const greetingContent = computed(() => {
+    const t = translations[currentLanguage.value]
+    return {
+        ...portfolio.greeting,
+        intro: t.greeting.intro,
+        message: t.greeting.message,
+        basedLocation: portfolio.greeting.basedLocation
+    }
+})
+
+const basedLocationText = computed(() => {
+    const t = translations[currentLanguage.value]
+    return t.greeting.basedLocation + ' ' + portfolio.greeting.basedLocation.split(',')[1]
+})
+
 const splashScreen = () => {
 	if (portfolio.splashScreen) {
 		setTimeout(() => {
 			showingSplash.value = false
-			router.push(window.location.hash)
+			if (!localStorage.getItem('language')) {
+				showLanguageSelect.value = true
+			} else {
+				router.push(window.location.hash)
+			}
 		}, 2000)
+	} else if (!localStorage.getItem('language')) {
+		showLanguageSelect.value = true
 	}
 }
 

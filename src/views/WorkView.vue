@@ -1,9 +1,9 @@
 <template>
     <section class="min-h-screen w-full" ref="workSection" id="work-section">
         <div class="relative flex py-5 items-center">
-            <h1 class="text-3xl font-bold pr-2 sm:pr-5">💻 Work</h1>
+            <h1 class="text-3xl font-bold pr-2 sm:pr-5">💻 {{ t.work.title }}</h1>
             <div class="flex-grow border-t border-black dark:border-white border-1"></div>
-            <a :href="portfolio.archiveLink" class="pl-2 sm:pl-5 hover:text-link-color text-right text-sm">Visit Archive</a>
+            <a :href="portfolio.archiveLink" class="pl-2 sm:pl-5 hover:text-link-color text-right text-sm">{{ t.work.archive }}</a>
         </div>
         <div class="flex flex-col space-y-8 mb-20">
             <!-- WorkUnit components from props.content (works array) -->
@@ -21,15 +21,18 @@
     </section>
 </template>
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import WorkUnit from '../components/WorkUnit.vue'
 import ProjectView from './ProjectView.vue'
 import portfolio from '../portfolio';
+import { translations, currentLanguage } from '../i18n/translations';
 
 const props = defineProps({
     content: Array,
     transitions: Object
 })
+
+const t = computed(() => translations[currentLanguage.value])
 
 const workSection = ref({})
 

@@ -6,20 +6,23 @@
                 :src="getImageUrl(content.portraitLink)"
             />
             <div class="flex flex-col space-y-2">
-                <p :class="['text-lg lg:text-xl transition-all motion-reduce:transition-none duration-500 delay-[500ms]', showTransition ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">{{ content.intro }}</p>
+                <p :class="['text-lg lg:text-xl transition-all motion-reduce:transition-none duration-500 delay-[500ms]', showTransition ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">{{ t.greeting.intro }}</p>
                 <h1 :class="['text-2xl lg:text-4xl font-bold transition-all motion-reduce:transition-none duration-500 delay-[550ms]', showTransition ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">{{ content.name }}</h1>
-                <p :class="['text-sm lg:text-base text-slate-500 dark:text-slate-300 transition-all motion-reduce:transition-none duration-500 delay-[600ms]', showTransition ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">{{ content.message }}</p>
+                <p :class="['text-sm lg:text-base text-slate-500 dark:text-slate-300 transition-all motion-reduce:transition-none duration-500 delay-[600ms]', showTransition ? 'translate-y-0 opacity-1' : '-translate-y-4 opacity-0']">{{ t.greeting.message }}</p>
             </div>
         </div>
     </section>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { translations, currentLanguage } from '../i18n/translations';
 
 const props = defineProps({
     content: Object,
     showTransition: Boolean
 })
+
+const t = computed(() => translations[currentLanguage.value])
 
 // Static Images
 const showIntro = ref(false)

@@ -1,7 +1,7 @@
 <template>
     <section class="min-h-screen w-full" ref="achievementsSection" id="achievements-section">
         <div class="relative flex py-5 items-center" :class="[visible ? 'translate-y-0 opacity-1 blur-0' : 'translate-y-4 opacity-0 blur-sm', 'transition-all motion-reduce:transition-none duration-500']">
-            <h1 class="text-3xl font-bold pr-5">🏆 Achievements</h1>
+            <h1 class="text-3xl font-bold pr-5">🏆 {{ t.achievements.title }}</h1>
             <div class="flex-grow border-t border-black dark:border-white border-1"></div>
         </div>
         <div :class="['flex flex-col space-y-6 mb-36 transition-all motion-reduce:transition-none duration-500 delay-300', visible ? 'translate-y-0 opacity-1 blur-0' : 'translate-y-4 opacity-0 blur-sm']">
@@ -33,13 +33,16 @@
     </section>
 </template>
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { onIntersect } from '../composables/onIntersect';
+import { translations, currentLanguage } from '../i18n/translations';
 
 const props = defineProps({
     content: Object,
     transitions: Object
 })
+
+const t = computed(() => translations[currentLanguage.value])
 
 const achievementsSection = ref({})
 const visible = props.transitions.active && window.matchMedia('(prefers-reduced-motion: no-preference)').matches ? onIntersect(achievementsSection, !!props.transitions.showOnce, { threshold: props.transitions.thresholdOption }) : true
