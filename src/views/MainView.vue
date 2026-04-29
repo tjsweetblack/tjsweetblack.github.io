@@ -43,6 +43,8 @@
 
 						<ExperienceView :content="portfolio.experiences" :transitions="portfolio.transitions" />
 
+						<AchievementsView :content="portfolio.achievements" :transitions="portfolio.transitions" />
+
 						<WorkView :content="portfolio.works" :transitions="portfolio.transitions" />
 
 						<ContactView :content="portfolio.contact" :transitions="portfolio.transitions" />
@@ -69,6 +71,7 @@ import Navbar from '../components/Navbar.vue'
 import LandingView from './LandingView.vue'
 import AboutView from './AboutView.vue'
 import ExperienceView from './ExperienceView.vue'
+import AchievementsView from './AchievementsView.vue'
 import WorkView from './WorkView.vue'
 import ContactView from './ContactView.vue'
 import SplashView from './SplashView.vue'

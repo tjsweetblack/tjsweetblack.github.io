@@ -62,6 +62,48 @@ const about = {
 // --- 🛡️ Experience Section ---
 const experiences = [
     {
+        position: "Full Stack Developer",
+        company: {
+            name: "AcademiaLb",
+            link: "https://academialb.com"
+        },
+        duration: "2024 - Present",
+        bulletPoints: [
+            "Developing and maintaining web applications for the university.",
+            "Collaborating with cross-functional teams to deliver high-quality software solutions.",
+            "Implementing responsive front-end interfaces using modern JavaScript frameworks.",
+            "Building and optimizing back-end APIs and database management."
+        ],
+        hashtags: [
+            "FullStack",
+            "WebDevelopment",
+            "JavaScript",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        position: "Freelance Fullstack Software Developer",
+        company: {
+            name: "Self-Employed",
+            link: ""
+        },
+        duration: "2023 - Present",
+        bulletPoints: [
+            "Building custom web and mobile applications for clients worldwide.",
+            "Designing and implementing scalable full-stack solutions.",
+            "Consulting on software architecture and best practices.",
+            "Delivering projects on time while maintaining high code quality."
+        ],
+        hashtags: [
+            "Freelance",
+            "FullStack",
+            "SoftwareDevelopment",
+            "Flutter",
+            "Vue.js"
+        ]
+    },
+    {
         position: "Graphic Designer",
         company: {
             name: "YetuBrand",
@@ -80,6 +122,31 @@ const experiences = [
             "Marketing",
             "Branding",
             "Creativity"
+        ]
+    }
+]
+
+// --- 🏆 Achievements Section ---
+const achievements = [
+    {
+        title: "42Luanda Transcender",
+        description: "Completed the entire 42 common core curriculum, comprising 16 projects spanning fundamentals, graphics, systems, networks, and web development. Demonstrated proficiency in C, C++, Python, Docker, and various other technologies through rigorous peer-to-peer learning and code reviews.",
+        date: "2025",
+        type: "education",
+        attachments: [
+            { label: "View Transcript", type: "pdf", url: "images/42-transcript.pdf" }
+        ]
+    },
+    {
+        title: "MapaZZZ Hackathon Winner (SudoZZZ 2025)",
+        description: "Won the hackathon with MapaZZZ, an innovative malaria prevention application that allows users to map and track mosquito breeding sites in their area. The project leverages Flutter, Firebase, and OpenStreetMap to create a life-saving tool for community health.",
+        date: "2025",
+        type: "competition",
+        attachments: [
+            { label: "Watch Demo Video 1", type: "video", url: "images/video1.MP4" },
+            { label: "Watch Demo Video 2", type: "video", url: "images/video2.MP4" },
+            { label: "Watch Demo Video 3", type: "video", url: "images/video3.MP4" },
+            { label: "Watch Demo Video 4", type: "video", url: "images/video4.MP4" }
         ]
     }
 ]
@@ -141,69 +208,84 @@ const works = [
         imageLink: "images/cub3d.png",
         alignLeft: true
     },
-    
+
 ]
 
 const projectUnit = [
     {
-      projectName: "MoBurger",
-      yearCompleted: "2025",
-      description: "A comprehensive mobile application built with Flutter for ordering and managing burger deliveries. Features include user authentication, menu browsing, custom burger creation, order placement, and real-time order tracking with Firebase backend integration.",
-      techStack: "Dart, Flutter, Firebase, OpenStreetMap",
-      links: [
-        { label: "Download on App Store", type: "appstore", url: "https://apps.apple.com/ao/app/moburger/id6755946307" },
-        { label: "View Live Demo", type: "external", url: "https://my-347sl8xjz-miros-projects-c74f19f1.vercel.app/" }
-      ],
-      imageLinks: [
-        "images/b1.png",
-        "images/b2.png",
-        "images/b3.png",
-        "images/b4.png",
-        "images/b5.png",
-        "images/b6.png",
-        "images/b7.png",
-        "images/b8.png",
-        "images/b9.png",
-        "images/b10.png",
-        "images/b11.png",
-        "images/b12.png",
+        projectName: "MoBurger",
+        yearCompleted: "2025",
+        description: "A comprehensive mobile application built with Flutter for ordering and managing burger deliveries. Features include user authentication, menu browsing, custom burger creation, order placement, and real-time order tracking with Firebase backend integration.",
+        techStack: "Dart, Flutter, Firebase, OpenStreetMap",
+        links: [
+            { label: "Download on App Store", type: "appstore", url: "https://apps.apple.com/ao/app/moburger/id6755946307" },
+            { label: "Visit Website", type: "external", url: "https://moburger.online" },
+            { label: "View Live Demo", type: "external", url: "https://my-347sl8xjz-miros-projects-c74f19f1.vercel.app/" }
         ],
-      alignLeft: false // Follows `so_long` (true), so this is correct.
+        imageLinks: [
+            "images/b1.png",
+            "images/b2.png",
+            "images/b3.png",
+            "images/b4.png",
+            "images/b5.png",
+            "images/b6.png",
+            "images/b7.png",
+            "images/b8.png",
+            "images/b9.png",
+            "images/b10.png",
+            "images/b11.png",
+            "images/b12.png",
+        ],
+        alignLeft: false // Follows `so_long` (true), so this is correct.
     },
     {
-      projectName: "MapaZZZ",
-      yearCompleted: "2025",
-      description: "An interactive mapping application developed using Flutter, integrating Firebase for data storage and OpenStreetMap for detailed geographical information. Allows users to discover or add mosquito breeding sites, view nearby sites, and receive notifications for nearby breeding sites. to avoid malaria.",
-      techStack: "Dart, Flutter, Firebase, OpenStreetMap",
-      links: [
-        { label: "View Live Demo", type: "external", url: "https://mapa-zzz-team-83bq43p0i-miros-projects-c74f19f1.vercel.app/" }
-      ],
-      imageLinks: [
-        "images/m1.png",
-        "images/m2.png",
-        "images/m3.png",
-        "images/m4.png",
-        "images/m5.png",
-        "images/m6.png",
-        "images/m7.png",
-        "images/m8.png",
-        "images/m9.png",
-        "images/m10.png",
-        "images/m11.png",
-        "images/m12.png",
-        "images/m13.png",
-        "images/m14.png",
-        "images/m15.png",
-        "images/m16.png",
-        "images/m17.png",
-        "images/m18.png",
-        "images/m19.png",
-        "images/m20.png",
-        "images/m21.png",
-      ],
-      alignLeft: true // This should be true to alternate with the previous project.
+        projectName: "MapaZZZ",
+        yearCompleted: "2025",
+        description: "An interactive mapping application developed using Flutter, integrating Firebase for data storage and OpenStreetMap for detailed geographical information. Allows users to discover or add mosquito breeding sites, view nearby sites, and receive notifications for nearby breeding sites. to avoid malaria.",
+        techStack: "Dart, Flutter, Firebase, OpenStreetMap",
+        links: [
+            { label: "View Live Demo", type: "external", url: "https://mapa-zzz-team-83bq43p0i-miros-projects-c74f19f1.vercel.app/" }
+        ],
+        imageLinks: [
+            "images/m1.png",
+            "images/m2.png",
+            "images/m3.png",
+            "images/m4.png",
+            "images/m5.png",
+            "images/m6.png",
+            "images/m7.png",
+            "images/m8.png",
+            "images/m9.png",
+            "images/m10.png",
+            "images/m11.png",
+            "images/m12.png",
+            "images/m13.png",
+            "images/m14.png",
+            "images/m15.png",
+            "images/m16.png",
+            "images/m17.png",
+            "images/m18.png",
+            "images/m19.png",
+            "images/m20.png",
+            "images/m21.png",
+        ],
+        alignLeft: true // This should be true to alternate with the previous project.
+    },
+    {
+        projectName: "The Story of Tchissola expo Japan 2025",
+        yearCompleted: "2025",
+        description: "A visually engaging website showcasing the story of Tchissola for Expo Japan 2025. The project presents an interactive narrative experience highlighting cultural heritage and storytelling through modern web design.",
+        techStack: "Vue.js, HTML, CSS, JavaScript",
+        links: [
+            { label: "View Website", type: "external", url: "https://expoqrwebsite.vercel.app/" }
+        ],
+        imageLinks: [
+            "images/tchissola1.png",
+            "images/tchissola2.png",
+        ],
+        alignLeft: false
     }
-  ];
+];
 
 const archiveLink = "https://github.com/feifyKike?tab=repositories"
 
@@ -234,6 +316,7 @@ export default {
     socialMediaLinks,
     about,
     experiences,
+    achievements,
     projectUnit,
     works,
     archiveLink,

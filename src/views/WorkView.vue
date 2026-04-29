@@ -5,7 +5,7 @@
             <div class="flex-grow border-t border-black dark:border-white border-1"></div>
             <a :href="portfolio.archiveLink" class="pl-2 sm:pl-5 hover:text-link-color text-right text-sm">Visit Archive</a>
         </div>
-        <div class="flex flex-col space-y-12 mb-36">
+        <div class="flex flex-col space-y-8 mb-20">
             <!-- WorkUnit components from props.content (works array) -->
             <WorkUnit
                 v-for="(project, index) in props.content"

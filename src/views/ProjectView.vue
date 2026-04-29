@@ -1,47 +1,45 @@
 <template>
-    <div :class="['flex flex-col lg:grid lg:grid-cols-2 lg:gap-x-8 transition-opacity motion-reduce:transition-none duration-500', showProject ? 'opacity-100' : 'opacity-0']">
-      <!-- Image Gallery -->
-      <div :class="['pb-4 lg:pb-0', project.alignLeft ? 'lg:order-last' : '']">
-          <div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
-              <template v-for="(image, index) in validImages" :key="index">
-                  <img v-if="image && typeof image === 'string' && image.trim() !== ''"
-                       @load="handleImageLoad"
-                       :src="getImageUrl(image)"
-                       class="h-auto w-full rounded-lg object-cover shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer" 
-                       loading="lazy" 
-                       @error="handleImageError"
-                       :alt="`${project.projectName} screenshot ${index + 1}`" />
-              </template>
-          </div>
-      </div>
+    <div :class="['transition-opacity motion-reduce:transition-none duration-500 mb-16', showProject ? 'opacity-100' : 'opacity-0']">
       <!-- Project Details -->
-      <div class="flex flex-col space-y-4" :class="project.alignLeft ? 'text-left' : 'lg:text-right'">
-          <p>{{ project.yearCompleted }}</p>
-          <h3 class="text-xl font-extrabold pb-2">{{ project.projectName }}</h3>
-          <p class="text-slate-500 dark:text-slate-300">{{ project.description }}</p>
-          <p class="text-slate-600">{{ project.techStack }}</p>
-          <div class="flex space-x-6 items-center text-slate-400" :class="!project.alignLeft ? 'lg:justify-end' : ''">
+      <div class="mb-6">
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-1">{{ project.yearCompleted }}</p>
+          <h3 class="text-2xl font-extrabold mb-3">{{ project.projectName }}</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-3">{{ project.description }}</p>
+          <p class="text-slate-500 mb-4">{{ project.techStack }}</p>
+          <div class="flex flex-wrap gap-4 text-slate-400">
               <a v-for="link in project.links" :href="link.url" class="flex items-center space-x-2 hover:text-link-color focus:text-link-color active:text-link-color" target="_blank">
                   <span v-if="link.type == 'git'" class="flex items-center space-x-2">
-                      <font-awesome-icon icon="fa-brands fa-github" class="h-7 w-7"></font-awesome-icon>
+                      <font-awesome-icon icon="fa-brands fa-github" class="h-6 w-6"></font-awesome-icon>
                       <span>{{ link.label }}</span>
                   </span>
                   <span v-else-if="link.type == 'external'" class="flex items-center space-x-2">
-                      <ArrowTopRightOnSquareIcon class="h-7 w-7"/>
+                      <ArrowTopRightOnSquareIcon class="h-6 w-6"/>
                       <span>{{ link.label }}</span>
                   </span>
                   <span v-else-if="link.type == 'appstore'" class="flex items-center space-x-2">
-                      <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                       </svg>
                       <span>{{ link.label }}</span>
                   </span>
                   <span v-else class="flex items-center space-x-2">
-                      <LinkIcon class="h-6 w-6"/>
+                      <LinkIcon class="h-5 w-5"/>
                       <span>{{ link.label }}</span>
                   </span>
               </a>
           </div>
+      </div>
+      <!-- Image Gallery -->
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          <template v-for="(image, index) in validImages" :key="index">
+              <img v-if="image && typeof image === 'string' && image.trim() !== ''"
+                   @load="handleImageLoad"
+                   :src="getImageUrl(image)"
+                   class="w-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer" 
+                   loading="lazy" 
+                   @error="handleImageError"
+                   :alt="`${project.projectName} screenshot ${index + 1}`" />
+          </template>
       </div>
     </div>
   </template>
