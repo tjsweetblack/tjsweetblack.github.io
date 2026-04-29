@@ -86,7 +86,7 @@ const router = useRouter()
 const showingSplash = ref(portfolio.splashScreen)
 const showLanguageSelect = ref(!localStorage.getItem('language'))
 const showLanding = ref(!(portfolio.transitions.active || portfolio.transitions.onlyLanding))
-const darkModeActive = ref(false)
+const darkModeActive = ref(localStorage.theme === 'dark')
 
 onMounted(() => {
 	splashScreen()
@@ -144,8 +144,7 @@ const landingTransition = () => {
 }
 
 const useDark = () => {
-	// credit: https://tailwindcss.com/docs/dark-mode#supporting-system-preference-and-manual-selection
-	if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+	if (localStorage.theme === 'dark') {
 		document.documentElement.classList.remove('bg-white')
 		document.documentElement.classList.add('dark', 'bg-slate-900')
 		darkModeActive.value = true

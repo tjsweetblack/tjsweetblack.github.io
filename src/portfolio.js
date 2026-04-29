@@ -218,9 +218,9 @@ const projectUnit = [
         description: "A comprehensive mobile application built with Flutter for ordering and managing burger deliveries. Features include user authentication, menu browsing, custom burger creation, order placement, and real-time order tracking with Firebase backend integration.",
         techStack: "Dart, Flutter, Firebase, OpenStreetMap",
         links: [
+            { label: "Download on Play Store", type: "playstore", url: "https://play.google.com/store/apps/details?id=com.moburger.app&pcampaignid=web_share" },
             { label: "Download on App Store", type: "appstore", url: "https://apps.apple.com/ao/app/moburger/id6755946307" },
-            { label: "Visit Website", type: "external", url: "https://moburger.online" },
-            { label: "View Live Demo", type: "external", url: "https://my-347sl8xjz-miros-projects-c74f19f1.vercel.app/" }
+            { label: "Visit Website", type: "external", url: "https://moburger.online" }
         ],
         imageLinks: [
             "images/b1.png",
