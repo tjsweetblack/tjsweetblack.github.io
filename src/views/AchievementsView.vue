@@ -24,6 +24,7 @@
                         class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded transition-colors duration-300"
                     >
                         <span v-if="attachment.type === 'pdf'">📄</span>
+                        <span v-else-if="attachment.type === 'image'">🖼️</span>
                         <span v-else>🎬</span>
                         <span class="ml-2">{{ attachment.label }}</span>
                     </a>

@@ -29,7 +29,7 @@ const greeting = {
         link: "images/initials.png", // use relative path from  parent directory -> ex: images/image.ext
         custom: true // takes precedence over image logo and allows for custom HTML logo (./components/Navbar.vue)
     },
-    portraitLink: 'images/portrait.jpg'
+    portraitLink: 'images/portrait.png'
 }
 
 const socialMediaLinks = {
@@ -147,6 +147,17 @@ const achievements = [
             { label: "Watch Demo Video 2", type: "video", url: "images/video2.MP4" },
             { label: "Watch Demo Video 3", type: "video", url: "images/video3.MP4" },
             { label: "Watch Demo Video 4", type: "video", url: "images/video4.MP4" }
+        ]
+    },
+    {
+        title: "1st Place Hackathon Winner",
+        description: "Architected and developed a robust mobile Point of Sale (POS) system using Flutter. The application facilitates real-time sales registration, features an embedded Machine Learning model for fraud detection and credit score assessment, manages live stock and inventory data, and integrates seamlessly with physical POS thermal printing hardware.",
+        date: "2025",
+        type: "competition",
+        attachments: [
+            { label: "View Image 1", type: "image", url: "images/p1.jpeg" },
+            { label: "View Image 2", type: "image", url: "images/p2.jpeg" },
+            { label: "View Image 3", type: "image", url: "images/p3.jpeg" }
         ]
     }
 ]
