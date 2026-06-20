@@ -22,7 +22,7 @@ const splashScreen = true // recommended: for best behavior after refresh
 const greeting = {
     intro: "Hello 👋, my name is",
     name: "Belmiro Adriano",
-    message: "I'm a computer science student and an aspiring software engineer. Currently working as a web developer at my university building tools to aid students, educators, and staff.",
+    message: "Software Developer",
     basedLocation: "Angola, LUANDA",
     resumeLink: "https://jmp.sh/opL8Ujes", // recommended: google drive file share link (change to "anyone on the internet can view")
     logo: {
@@ -41,7 +41,7 @@ const socialMediaLinks = {
 // --- 😎 About Section ---
 const about = {
     autobiography: [
-        "My name is Belmiro Adriano, and I’m a computer science student at 42 Luanda, where I study software engineering. My primary programming languages are C and C++, but I’m also expanding my skills by learning Dart, Flutter, and Python on my own.I’m responsible, organized, and a problem solver. I work well in a team, learn quickly, and think independently. I’ve been programming for over 3 years and have a strong foundation in advanced mathematics like calculus, statistics, and discrete mathematics. Currently, I’m focused on developing projects that merge my skills in software engineering and mobile app development."
+        "My name is Belmiro Adriano, and I’m a software developer with experience in C, C++, Flutter, Python, and Node.js. I’m responsible, organized, and a problem solver. I work well in a team, learn quickly, and think independently. I’ve been programming for over 3 years and have a strong foundation in advanced mathematics like calculus, statistics, and discrete mathematics. I’ve developed various projects that enhanced my experience in mobile development."
     ], // Separated items are paragraphs
     techStack: [
         "C",
@@ -62,28 +62,29 @@ const about = {
 // --- 🛡️ Experience Section ---
 const experiences = [
     {
-        position: "Full Stack Developer",
+        position: "FullStack & Flutter Mobile",
         company: {
             name: "AcademiaLb",
             link: "https://academialb.com"
         },
         duration: "2024 - Present",
         bulletPoints: [
-            "Developing and maintaining web applications for the university.",
-            "Collaborating with cross-functional teams to deliver high-quality software solutions.",
-            "Implementing responsive front-end interfaces using modern JavaScript frameworks.",
-            "Building and optimizing back-end APIs and database management."
+            "Developing and maintaining web applications using React and Node.js.",
+            "Building and optimizing back-end APIs and database management.",
+            "Creating cross-platform Flutter applications for mobile devices.",
+            "Collaborating with cross-functional teams to deliver high-quality software solutions."
         ],
         hashtags: [
             "FullStack",
             "WebDevelopment",
-            "JavaScript",
-            "Vue.js",
+            "Flutter",
+            "MobileDevelopment",
+            "React",
             "Node.js"
         ]
     },
     {
-        position: "Freelance Fullstack Software Developer",
+        position: "FullStack & Flutter Mobile",
         company: {
             name: "Self-Employed",
             link: ""
@@ -91,37 +92,17 @@ const experiences = [
         duration: "2023 - Present",
         bulletPoints: [
             "Building custom web and mobile applications for clients worldwide.",
-            "Designing and implementing scalable full-stack solutions.",
-            "Consulting on software architecture and best practices.",
+            "Creating cross-platform Flutter applications for mobile devices.",
+            "Developing full-stack solutions with React and Node.js backends.",
             "Delivering projects on time while maintaining high code quality."
         ],
         hashtags: [
-            "Freelance",
             "FullStack",
-            "SoftwareDevelopment",
             "Flutter",
-            "Vue.js"
-        ]
-    },
-    {
-        position: "Graphic Designer",
-        company: {
-            name: "YetuBrand",
-            link: "https://yetubrand.ao"
-        },
-        duration: "2021 - 2023",
-        bulletPoints: [
-            "Designed visually appealing graphics and layouts for various marketing materials.",
-            "Collaborated with clients to understand their branding needs and deliver tailored solutions.",
-            "Managed multiple projects simultaneously while meeting tight deadlines.",
-            "Utilized Adobe Creative Suite tools to create high-quality designs."
-        ],
-        hashtags: [
-            "AdobeDesignTools",
-            "GraphicDesign",
-            "Marketing",
-            "Branding",
-            "Creativity"
+            "MobileDevelopment",
+            "Dart",
+            "React",
+            "Node.js"
         ]
     }
 ]

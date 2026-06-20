@@ -10,7 +10,7 @@ export const translations = {
         },
         greeting: {
             intro: "Hello 👋, my name is",
-            message: "I'm a computer science student and an aspiring software engineer. Currently working as a web developer at my university building tools to aid students, educators, and staff.",
+            message: "Software Developer",
             basedLocation: "Based in"
         },
         about: {
